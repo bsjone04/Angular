@@ -2,6 +2,8 @@
 <html ng-app="gemStore">
 <head>
 <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+<script type="text/javascript" src="angular.min.js"></script>
+<script type="text/javascript" src="app.js"></script>
 
 
 </head>
@@ -9,12 +11,11 @@
     <div class="product row" ng-repeat="product in store.products">
       <h3>
         {{store.product.name}}
-        <em class="pull-right">${{store.product.price}}</em>
+        <em class="pull-right">{{store.product.price | currency}}</em>
       </h3>
 	 <button ng-show="store.product.canPurchase">Add to Cart</button>
     </div>
-<script type="text/javascript" src="angular.min.js"></script>
-<script type="text/javascript" src="app.js"></script>
+
 
 
 </body>
