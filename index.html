@@ -80,3 +80,18 @@
 </html>
 
 
+
+
+
+
+      <div class='gallery' ng-show="product.images.length" ng-controller="GalleryController as gallery" >
+        <div class="img wrap">
+<img ng-src="{{product.images[gallery.current]}}" />
+</div>
+        <ul class="list-inline thumbs">
+          <li class="thumbnail" ng-repeat="image in product.images">
+            <img ng-src="{{image}}" />
+          </li>
+        </ul>
+      </div>
+
